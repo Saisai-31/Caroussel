@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#caroussel {
+    width: 640px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+.images {
+    display: flex;
+    animation-duration: 20s;
+    animation-name: mesImages;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mesImages{
+    0% {
+        transform: translateX(0);
+    }  /* au temps 0%, on veut que nos images soient calés au point 0 */
+    /* au temps 25% je veux reculer de la lageur de mon image  */
+    25% {
+        transform: translateX(-640px);
+    } /* au temps 25% je suis à -640px et je veux reculer de la largeur de mon image*/
+    50% {
+        transform: translateX(-1280px);
+        /* au temps 50% je suis à (-640 *2) -1280 et je veux reculer de la largeur de mon image */
+    }
+    75% {
+        transform: translateX(-1920px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+
+
+}
