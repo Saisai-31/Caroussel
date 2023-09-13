@@ -33,9 +33,11 @@ body {
     }
     75% {
         transform: translateX(-1920px);
+        /* au temps 75% je suis à (-1280px + 640px 2) -1920 et je veux reculer de la largeur de mon image */
     }
     100% {
         transform: translateX(0px);
+        /* au temps 100% je viens au point 0 */
     }
 
 
